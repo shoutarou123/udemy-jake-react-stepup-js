@@ -4,6 +4,7 @@ import { Page1 } from "../Page1";
 import { Page2 } from "../Page2";
 import { page1Routes } from "./Page1Routes";
 import { page2Routes } from "./Page2Routes";
+import { Page404 } from "../Page404";
 
 export const Router = () => {
   return (
@@ -24,6 +25,10 @@ export const Router = () => {
             <Route key={index} path={route.path} element={route.children} />
           ))}
       </Route>
+
+       {/* 404ページ（任意のパスにマッチしたときに表示） */}
+      <Route path="*" element={<Page404 />} />
+      
     </Routes>
   );
 };
