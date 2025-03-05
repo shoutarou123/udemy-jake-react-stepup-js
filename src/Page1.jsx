@@ -11,6 +11,8 @@ export const Page1 = () => {
     navigate(path, {state: arr});
   };
 
+  const onClickDetailC = () => navigate("/page1/detailC"); // navigate() を使って遷移する
+
 
   return (
     <>
@@ -20,6 +22,8 @@ export const Page1 = () => {
       {/* 上記の記述だとpathnameは渡せるが、stateはnullになってしまうためuseNavigateで対応した */}
       <br />
       <Link to="/page1/detailB">DetailB</Link>
+      <br />
+      <button onClick={onClickDetailC}>DetailC</button>
     </>
   );
 };
