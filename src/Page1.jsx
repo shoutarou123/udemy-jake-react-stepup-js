@@ -17,6 +17,7 @@ export const Page1 = () => {
       <h1>Page1ページです</h1>
       <button onClick={() => handleNavigate("/page1/detailA")}>DetailA</button>
       {/* <Link to = {{pathname: "/page1/detailA", state: arr}} >DetailA</Link> */}
+      {/* 上記の記述だとpathnameは渡せるが、stateはnullになってしまうためuseNavigateで対応した */}
       <br />
       <Link to="/page1/detailB">DetailB</Link>
     </>
